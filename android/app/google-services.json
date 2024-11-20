@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "813218655539",
+    "project_id": "t2024cs3-campusdiningapp-ac2a3",
+    "storage_bucket": "t2024cs3-campusdiningapp-ac2a3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813218655539:android:d4c947b97074b805a5a246",
+        "android_client_info": {
+              "package_name": "com.example.campusdining_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813218655539-aa1vuuvg8d7lnfqpd7s2jpse82utthpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCebRPdq5OKFYhpOT1gVjim953q7bGwbv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813218655539-aa1vuuvg8d7lnfqpd7s2jpse82utthpq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "813218655539-2i56d491sc0as87ns13vql4qcfcn0gk7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.campusdiningMobile"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:813218655539:android:4849d277447d469da5a246",
+        "android_client_info": {
+          "package_name": "com.example.campusdining_mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "813218655539-8q5k4vsdjmj3brj1bte4cktcjhot8oke.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.campusdining_mobile",
+            "certificate_hash": "c2425aeef167fc0dc61388c8b939247d654b84b1"
+          }
+        },
+        {
+          "client_id": "813218655539-aa1vuuvg8d7lnfqpd7s2jpse82utthpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCebRPdq5OKFYhpOT1gVjim953q7bGwbv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "813218655539-aa1vuuvg8d7lnfqpd7s2jpse82utthpq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "813218655539-2i56d491sc0as87ns13vql4qcfcn0gk7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.campusdiningMobile"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
