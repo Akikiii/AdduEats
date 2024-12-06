@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import '../dashboard.dart'; // Import your Dashboard page
+import '../dashboard.dart' as dashboard; // Import your Dashboard page
 import '../profilePage.dart'; // Import your Profile page
+import '../restoPage.dart' as restoPage; // Import restoPage function
+
 
 class NavigationBarComponent extends StatefulWidget {
   final int currentIndex; // Pass the current index to highlight the correct tab
 
-  NavigationBarComponent({required this.currentIndex});
+  const NavigationBarComponent({super.key, required this.currentIndex});
 
   @override
   _NavigationBarComponentState createState() => _NavigationBarComponentState();
@@ -17,7 +19,7 @@ class _NavigationBarComponentState extends State<NavigationBarComponent> {
   @override
   void initState() {
     super.initState();
-    _selectedIndex = widget.currentIndex; // Set the initial selected index
+    _selectedIndex = widget.currentIndex; 
   }
 
   // Navigation logic for each tab
@@ -25,12 +27,17 @@ class _NavigationBarComponentState extends State<NavigationBarComponent> {
     if (index == 0 && _selectedIndex != 0) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => Dashboard()),
+        MaterialPageRoute(builder: (context) => const dashboard.Dashboard()),
       );
     } else if (index == 1 && _selectedIndex != 1) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => ProfilePage()),
+        MaterialPageRoute(builder: (context) => restoPage.RestoPage()),
+      );
+    } else if (index == 2 && _selectedIndex != 2) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const ProfilePage()),
       );
     }
     setState(() {
@@ -43,8 +50,12 @@ class _NavigationBarComponentState extends State<NavigationBarComponent> {
     return BottomNavigationBar(
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
+          icon: Icon(Icons.food_bank),
+          label: 'Foods',
+        ),
+        BottomNavigationBarItem(
           icon: Icon(Icons.restaurant),
-          label: 'Restaurant',
+          label: 'Restaurants',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.account_circle),

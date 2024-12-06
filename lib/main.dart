@@ -19,6 +19,8 @@ void main() async {
 
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -34,6 +36,8 @@ class GetStartedScreen extends StatelessWidget {
     'assets/background3.jpg',
     'assets/background4.jpg',
   ];
+
+ GetStartedScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -61,20 +65,20 @@ class GetStartedScreen extends StatelessWidget {
                       );
                     },
                     style: ElevatedButton.styleFrom(
-                      padding: EdgeInsets.symmetric(vertical: 16, horizontal: 64),
+                      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 64),
                       
                     ),
-                    child: Text(
+                    child: const Text(
                       'Get Started',
                       style: TextStyle(fontSize: 20),
                     ),
                   ),
-                  SizedBox(height: 16), 
+                  const SizedBox(height: 16), 
                   GestureDetector(
                     onTap: () {
                       
                     },
-                    child: Text(
+                    child: const Text(
                       "Already created an account? Sign in here",
                       style: TextStyle(
                         color: Colors.blue, // Styling it like a link
@@ -97,7 +101,7 @@ class GetStartedScreen extends StatelessWidget {
 class ImageSlider extends StatefulWidget {
   final List<String> images;
 
-  ImageSlider({required this.images});
+  const ImageSlider({super.key, required this.images});
 
   @override
   _ImageSliderState createState() => _ImageSliderState();
@@ -113,7 +117,7 @@ class _ImageSliderState extends State<ImageSlider> {
     _pageController = PageController(initialPage: 0);
 
     // Start automatic sliding
-    Future.delayed(Duration(seconds: 2), _autoSlide);
+    Future.delayed(const Duration(seconds: 2), _autoSlide);
   }
 
   void _autoSlide() {
@@ -123,14 +127,13 @@ class _ImageSliderState extends State<ImageSlider> {
         currentIndex = (currentIndex + 1) % widget.images.length;
         _pageController.animateToPage(
           currentIndex,
-          duration: Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 500),
           curve: Curves.easeInOut,
         );
       });
     }
 
-    // Continue auto sliding after a delay
-    Future.delayed(Duration(seconds: 2), _autoSlide);
+    Future.delayed(const Duration(seconds: 2), _autoSlide);
   }
 
   @override

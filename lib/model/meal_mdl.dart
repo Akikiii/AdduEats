@@ -6,6 +6,7 @@ class Item {
   final DateTime dateCreated; 
   final String photoUrl;
   final int price;
+  final String restaurantName; // Added this property
 
   Item({
     required this.name,
@@ -13,6 +14,7 @@ class Item {
     required this.dateCreated,
     required this.photoUrl,
     required this.price,
+    required this.restaurantName, // Constructor updated
   });
 
   factory Item.fromMap(Map<String, dynamic> data) {
@@ -25,9 +27,10 @@ class Item {
       dateCreated: dateCreated,
       photoUrl: data['photoUrl'] ?? '',
       price: data['price'] ?? 0,
+      restaurantName: data['restaurantName'] ?? '', // Map the restaurantName field
     );
   }
- 
+
   Map<String, dynamic> toMap() {
     return {
       'name': name,
@@ -35,6 +38,7 @@ class Item {
       'dateCreated': Timestamp.fromMillisecondsSinceEpoch(dateCreated.millisecondsSinceEpoch), 
       'photoUrl': photoUrl,
       'price': price,
+      'restaurantName': restaurantName, // Include in the map
     };
   }
 }

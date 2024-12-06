@@ -4,7 +4,7 @@ import 'package:flip_card/flip_card.dart';
 
 class DisplayCard extends StatelessWidget {
   final Item item;
-  DisplayCard({required this.item});
+  const DisplayCard({super.key, required this.item});
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +66,7 @@ class DisplayCard extends StatelessWidget {
           child: Container(
             height: 250.0,
             alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
@@ -80,7 +80,7 @@ class DisplayCard extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 // Price
                 Text(
                   'Price: \$${item.price}',
@@ -90,7 +90,7 @@ class DisplayCard extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Text(
                   'Created on: ${item.dateCreated.toLocal()}',
                   style: const TextStyle(

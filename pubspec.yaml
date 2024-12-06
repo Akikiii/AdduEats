@@ -15,6 +15,7 @@ dependencies:
   google_sign_in: ^6.2.2
   flip_card: ^0.6.0
   cloud_firestore: ^5.5.0
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -30,3 +31,7 @@ flutter:
     - assets/background2.jpg
     - assets/background3.jpg
     - assets/background4.jpg
+    - assets/restaurant.jpg
+    - assets/ads1.jpg
+    - assets/ads2.jpg
+    - assets/ads3.png

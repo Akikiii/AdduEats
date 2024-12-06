@@ -289,7 +289,7 @@ class FilterChipExample extends StatefulWidget {
   final List<String> choices;
   final ValueChanged<String> onSortChanged;
 
-  FilterChipExample({required this.choices, required this.onSortChanged});
+  const FilterChipExample({super.key, required this.choices, required this.onSortChanged});
 
   @override
   _FilterChipExampleState createState() => _FilterChipExampleState();
@@ -319,6 +319,8 @@ class _FilterChipExampleState extends State<FilterChipExample> {
 }
 
 class Dashboard extends StatefulWidget {
+  const Dashboard({super.key});
+
   @override
   _DashboardState createState() => _DashboardState();
 }
@@ -432,7 +434,7 @@ class _DashboardState extends State<Dashboard> {
                     border: InputBorder.none,
                     hintStyle: TextStyle(color: Colors.white70),
                   ),
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(color: Colors.white),
                   onSubmitted: _onSearchSubmitted,
                   onTap: _onSearchTapped, // Show search history when tapped
                 ),
@@ -466,7 +468,7 @@ class _DashboardState extends State<Dashboard> {
                           const SizedBox(height: 5),
                           Center(
                             child: FilterChipExample(
-                              choices: ['A-Z', 'Z-A'],
+                              choices: const ['A-Z', 'Z-A'],
                               onSortChanged: _onSortChanged, // Pass the sorting logic
                             ),
                           ),
@@ -523,7 +525,7 @@ class _DashboardState extends State<Dashboard> {
         body: Stack(
           children: [
             isLoading
-                ? Center(child: CircularProgressIndicator())
+                ? const Center(child: CircularProgressIndicator())
                 : ListView.builder(
                     itemCount: filteredItems.length,
                     itemBuilder: (context, index) {
@@ -537,7 +539,7 @@ class _DashboardState extends State<Dashboard> {
                 left: 0,
                 right: 0,
                 child: Container(
-                  padding: EdgeInsets.all(8),
+                  padding: const EdgeInsets.all(8),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8),
@@ -549,7 +551,7 @@ class _DashboardState extends State<Dashboard> {
                       ),
                     ],
                   ),
-                  constraints: BoxConstraints(maxHeight: 150), // Limit height
+                  constraints: const BoxConstraints(maxHeight: 150), // Limit height
                   child: ListView.builder(
                     shrinkWrap: true,
                     itemCount: searchHistory.length,

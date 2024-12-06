@@ -75,6 +75,8 @@ void main() async {
 }
 
 class LogPage extends StatelessWidget {
+  const LogPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -85,6 +87,8 @@ class LogPage extends StatelessWidget {
 }
 
 class SignInPage extends StatefulWidget {
+  const SignInPage({super.key});
+
   @override
   _SignInPageState createState() => _SignInPageState();
 }
@@ -149,9 +153,9 @@ class _SignInPageState extends State<SignInPage> {
       appBar: AppBar(
       backgroundColor: const Color.fromARGB(255, 119, 109, 109).withOpacity(1.0),
       elevation: 0, // Removes the shadow under the AppBar
-      title: Text("Sign Up", style: TextStyle(color: Colors.white)), // Optional
+      title: const Text("Sign Up", style: TextStyle(color: Colors.white)), // Optional
       leading: IconButton(
-        icon: Icon(Icons.arrow_back, color: Colors.white),
+        icon: const Icon(Icons.arrow_back, color: Colors.white),
         onPressed: () {
           Navigator.pop(context);
         },
@@ -195,7 +199,7 @@ class _SignInPageState extends State<SignInPage> {
                     end: Alignment.bottomRight,
                   ),
                   borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black26,
                       blurRadius: 10,
@@ -203,11 +207,11 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ],
                 ),
-                padding: EdgeInsets.all(25),
+                padding: const EdgeInsets.all(25),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text(
+                    const Text(
                       'Sign Up',
                       style: TextStyle(
                         fontSize: 32,
@@ -223,7 +227,7 @@ class _SignInPageState extends State<SignInPage> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     // Email Field
                     TextField(
                       controller: emailController,
@@ -236,7 +240,7 @@ class _SignInPageState extends State<SignInPage> {
                         fillColor: Colors.white,
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     // Password Field
                     TextField(
                       controller: passwordController,
@@ -250,10 +254,18 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                       obscureText: true,
                     ),
-                    SizedBox(height: 30),
+                    const SizedBox(height: 30),
                     // Sign Up Button
                     ElevatedButton(
                       onPressed: _handleSignUp,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color.fromARGB(255, 0, 128, 0),
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        elevation: 5,
+                      ),
                       child: Text(
                         'SIGN UP',
                         style: TextStyle(
@@ -262,31 +274,23 @@ class _SignInPageState extends State<SignInPage> {
                           color: Colors.white,
                         ),
                       ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(255, 0, 128, 0),
-                        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 14),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        elevation: 5,
-                      ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     // Login Prompt
                     TextButton(
                       onPressed: () {},
-                      child: Text(
+                      child: const Text(
                         'Already have an account? Login',
                         style: TextStyle(color: Colors.white70),
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     // Social Sign-Up
-                    Text(
+                    const Text(
                       'Sign up as',
                       style: TextStyle(fontSize: 16, color: Colors.white70),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -315,7 +319,7 @@ class _SignInPageState extends State<SignInPage> {
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.white,
-        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(8),
           side: BorderSide(color: Colors.grey[300]!),
@@ -325,9 +329,9 @@ class _SignInPageState extends State<SignInPage> {
         children: [
           Text(
             label,
-            style: TextStyle(color: Colors.black, fontSize: 16),
+            style: const TextStyle(color: Colors.black, fontSize: 16),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Image.asset(
             assetPath,
             width: 24,
